@@ -18,7 +18,7 @@ module.exports = {
     main: path.resolve(__dirname, 'src/entries/main')
   },
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/dist/client'),
     publicPath: '/assets/',
     filename: '[chunkhash]-[name].js'
   },
@@ -82,8 +82,15 @@ module.exports = {
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 8192
+            limit: 8192 // 8kB
           }
+        }]
+      },
+      {
+        // ico is lower than limit of url-loader, so we explictly use file-loader
+        test: /.ico$/,
+        use: [{
+          loader: 'file-loader',
         }]
       }
     ]
