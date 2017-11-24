@@ -7,7 +7,7 @@ module.exports = {
     // First application
     {
       name      : 'Carousell Code Test',
-      script    : './dist/server.js',
+      script    : './dist/server/index.js',
       env: {
         COMMON_VARIABLE: 'true',
         NODE_ENV: 'development',
