@@ -9,6 +9,9 @@ mock('../../../webpack-assets.json', {
     css: ''
   },
 });
+
+mock('../layout', '../../__mocks__/dummydom');
+
 // WARNING: import server from '../' does not work
 // remove .default if module is defined as COMMONJS
 const app = require('../app').default;
