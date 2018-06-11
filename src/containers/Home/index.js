@@ -9,6 +9,8 @@ import PostlistComponent from './Postlist';
 import stdout from '../../stdout';
 import './style.scss';
 
+import custom './custom.scss';
+
 const debug = stdout('container/Home');
 
 export class Home extends React.Component {
@@ -36,6 +38,10 @@ export class Home extends React.Component {
           <meta name="description" content="home page shows posts" />
           <meta name="og:title" content="home page" />
         </Helmet>
+
+        <div className={custom.demo}>
+          Custom styles
+        </div>
 
         <FormPostComponent />
 
